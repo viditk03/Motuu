@@ -21,7 +21,7 @@ export default function App() {
         overflow: 'hidden',
       }}
     >
-      {/* Ambient header controls (Themes, Sound & Note for Mith) */}
+      {/* Ambient header controls (Themes, Sound & Note for Kshitija) */}
       <GardenControls
         theme={theme}
         setTheme={setTheme}
@@ -31,7 +31,7 @@ export default function App() {
       {/* Main Fullscreen Animated Garden Scene */}
       <Garden theme={theme} />
 
-      {/* Dedicated Handwritten Note Modal for Mith */}
+      {/* Dedicated Handwritten Note Modal for Kshitija */}
       <LetterModal
         isOpen={isLetterOpen}
         onClose={() => setIsLetterOpen(false)}

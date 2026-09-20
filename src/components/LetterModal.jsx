@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * A beautiful, elegant handwritten-style letter modal for Mith.
+ * A beautiful, elegant handwritten-style letter modal for Kshitija.
  */
 export default function LetterModal({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -52,7 +52,7 @@ export default function LetterModal({ isOpen, onClose }) {
             letterSpacing: '0.02em',
           }}
         >
-          Dear Mith,
+          Dear Kshitija,
         </h2>
 
         <p
@@ -93,6 +93,8 @@ export default function LetterModal({ isOpen, onClose }) {
           }}
         >
           A garden that blooms forever, just for you. 💖
+          <br /><br />
+          Goodbye, Kshitija.
         </div>
 
         <button

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 /**
- * Minimalist, elegant ambient controls customized for Mith:
- * - Brand badge: "For Mith ✨" • "A garden that blooms forever, just for you"
- * - Letter for Mith 💌 button
+ * Minimalist, elegant ambient controls customized for Kshitija:
+ * - Brand badge: "For Kshitija ✨" • "A garden that blooms forever, just for you"
+ * - Letter for Kshitija 💌 button
  * - Theme switcher (Dawn, Sun, Sunset, Twilight)
  * - Soothing Web Audio ambient chimes & gentle breeze sound
  */
@@ -109,13 +109,13 @@ export default function GardenControls({
     <header className="header-overlay">
       <div className="brand-badge">
         <div>
-          <h1 className="brand-title">For Mith ✨</h1>
+          <h1 className="brand-title">For Kshitija ✨</h1>
           <p className="brand-subtitle">A garden that blooms forever, just for you</p>
         </div>
       </div>
 
       <nav className="controls-bar" aria-label="Garden Atmosphere Controls">
-        {/* Special letter button for Mith */}
+        {/* Special letter button for Kshitija */}
         <button
           className="control-btn"
           style={{
@@ -125,10 +125,10 @@ export default function GardenControls({
             fontWeight: 600,
           }}
           onClick={onOpenLetter}
-          title="Open letter for Mith"
+          title="Open letter for Kshitija"
         >
           <span>💌</span>
-          <span>A Note For Mith</span>
+          <span>A Note For Kshitija</span>
         </button>
 
         {/* Time of Day options */}

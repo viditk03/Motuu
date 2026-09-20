@@ -494,11 +494,11 @@ export default function Garden({ theme = 'dawn' }) {
   const [clickHearts, setClickHearts] = React.useState([]);
 
   const sweetNotes = useMemo(() => [
-    "Like this bloom, you bring color to everything around you, Mith. ✨",
-    "No flower in this entire meadow could ever be as radiant as your smile, Mith. 🌸",
+    "Like this bloom, you bring color to everything around you, Kshitija. ✨",
+    "No flower in this entire meadow could ever be as radiant as your smile, Kshitija. 🌸",
     "Real flowers fade with time, but this garden blooms forever just for you. 💖",
     "You make ordinary days feel like a sunny morning in spring. ☀️",
-    "Every petal here is a little reminder of how special you are, Mith. 🌷",
+    "Every petal here is a little reminder of how special you are, Kshitija. 🌷",
     "Just in case no one told you today: you are genuinely wonderful. 💫",
     "A thousand flowers, and my favorite view is still you. 🌹",
     "Wishing you as much peace and joy as a quiet garden at sunrise. 🌿",
@@ -567,7 +567,7 @@ export default function Garden({ theme = 'dawn' }) {
       {/* Drifting petals */}
       <PetalParticles count={22} />
 
-      {/* Sweet popup card when clicking a flower for Mith */}
+      {/* Sweet popup card when clicking a flower for Kshitija */}
       {activeNote && (
         <div
           style={{
@@ -594,7 +594,7 @@ export default function Garden({ theme = 'dawn' }) {
           }}
         >
           <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#e11d48', marginBottom: '4px', fontWeight: 600 }}>
-            🌸 A Bloom For Mith
+            🌸 A Bloom For Kshitija
           </div>
           <div style={{ fontStyle: 'italic', lineHeight: 1.5 }}>
             "{activeNote.text}"
@@ -649,7 +649,7 @@ export default function Garden({ theme = 'dawn' }) {
 
       {/* Bottom atmospheric title */}
       <div className="peaceful-prompt">
-        A garden that blooms forever, just for Mith ✨ • Click any flower
+        A garden that blooms forever, just for Kshitija ✨ • Click any flower
       </div>
     </div>
   );
