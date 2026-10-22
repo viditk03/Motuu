@@ -585,29 +585,110 @@ html, body {
   100% { opacity: 0.85; }
 }
 
+.btn-label-short {
+  display: none;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .header-overlay {
-    padding: 16px;
+    padding: 12px 16px;
     flex-direction: column;
-    gap: 12px;
-    align-items: stretch;
+    gap: 10px;
+    align-items: center;
   }
   .brand-badge {
-    align-self: flex-start;
+    align-self: center;
+    padding: 8px 16px;
+    gap: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  }
+  .brand-title {
+    font-size: 1.05rem;
+  }
+  .brand-subtitle {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
   }
   .controls-bar {
-    align-self: flex-start;
+    align-self: center;
+    display: flex;
     overflow-x: auto;
-    max-width: 100%;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    max-width: 96vw;
+    width: auto;
+    justify-content: center;
+    padding: 5px 8px;
+    gap: 6px;
+  }
+  .controls-bar::-webkit-scrollbar {
+    display: none;
   }
   .control-btn {
     padding: 6px 10px;
-    font-size: 0.75rem;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .atmospheric-sun {
-    width: 220px;
-    height: 220px;
-    right: 10%;
+    width: 200px;
+    height: 200px;
+    right: 5%;
+    top: 6%;
+  }
+  /* Scale plants slightly down on mobile so the meadow feels balanced without clipping */
+  .plant-unit {
+    transform: scale(0.85);
+    transform-origin: bottom center;
+  }
+  .peaceful-prompt {
+    font-size: 0.8rem;
+    bottom: 14px;
+    width: 90%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .btn-label-full {
+    display: none;
+  }
+  .btn-label-short {
+    display: inline;
+  }
+  .theme-btn span:nth-child(2) {
+    display: none; /* Icon-only on tight mobile screens for theme buttons */
+  }
+  .control-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+  .controls-bar {
+    gap: 4px;
+    padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-overlay {
+    padding: 10px 12px;
+    gap: 8px;
+  }
+  .brand-badge {
+    padding: 6px 14px;
+  }
+  .brand-title {
+    font-size: 0.98rem;
+  }
+  .brand-subtitle {
+    font-size: 0.62rem;
+  }
+  .plant-unit {
+    transform: scale(0.72);
+  }
+  .distant-hills {
+    height: 180px;
+    bottom: 80px;
   }
 }

@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef } from 'react';
 
 /**
- * Minimalist, elegant ambient controls customized for Kshitija:
- * - Brand badge: "For Kshitija ✨" • "A garden that blooms forever, just for you"
- * - Letter for Kshitija 💌 button
+ * Minimalist, elegant ambient controls customized for Motuu:
+ * - Brand badge: "For Motuu ✨" • "A garden that blooms forever, just for you"
+ * - Letter for Motuu 💌 button
  * - Theme switcher (Dawn, Sun, Sunset, Twilight)
  * - Soothing Web Audio ambient chimes & gentle breeze sound
  */
@@ -109,50 +109,53 @@ export default function GardenControls({
     <header className="header-overlay">
       <div className="brand-badge">
         <div>
-          <h1 className="brand-title">For Kshitija ✨</h1>
+          <h1 className="brand-title">For Motuu ✨</h1>
           <p className="brand-subtitle">A garden that blooms forever, just for you</p>
         </div>
       </div>
 
       <nav className="controls-bar" aria-label="Garden Atmosphere Controls">
-        {/* Special letter button for Kshitija */}
+        {/* Special letter button for Motuu */}
         <button
-          className="control-btn"
+          className="control-btn letter-btn"
           style={{
-            background: 'linear-gradient(135deg, rgba(244, 63, 94, 0.25), rgba(251, 191, 36, 0.25))',
-            border: '1px solid rgba(244, 63, 94, 0.4)',
+            background: 'linear-gradient(135deg, rgba(244, 63, 94, 0.28), rgba(251, 191, 36, 0.28))',
+            border: '1px solid rgba(244, 63, 94, 0.45)',
             color: 'var(--ui-text)',
             fontWeight: 600,
           }}
           onClick={onOpenLetter}
-          title="Open letter for Kshitija"
+          title="Open letter for Motuu"
         >
           <span>💌</span>
-          <span>A Note For Kshitija</span>
+          <span className="btn-label-full">A Note For Motuu</span>
+          <span className="btn-label-short">Note</span>
         </button>
 
         {/* Time of Day options */}
         {themes.map((t) => (
           <button
             key={t.id}
-            className={`control-btn ${theme === t.id ? 'active' : ''}`}
+            className={`control-btn theme-btn ${theme === t.id ? 'active' : ''}`}
             onClick={() => setTheme(t.id)}
             aria-pressed={theme === t.id}
+            title={t.label}
           >
             <span>{t.icon}</span>
-            <span>{t.label}</span>
+            <span className="btn-label-full">{t.label}</span>
           </button>
         ))}
 
         {/* Ambient garden chimes toggle */}
         <button
-          className={`control-btn ${isPlayingAudio ? 'active' : ''}`}
+          className={`control-btn sound-btn ${isPlayingAudio ? 'active' : ''}`}
           onClick={toggleAudio}
           title={isPlayingAudio ? 'Mute ambient sound' : 'Play peaceful garden chimes & wind'}
           aria-label="Toggle ambient garden sounds"
         >
           <span>{isPlayingAudio ? '🔔' : '🔕'}</span>
-          <span>{isPlayingAudio ? 'Sound On' : 'Play Sound'}</span>
+          <span className="btn-label-full">{isPlayingAudio ? 'Sound On' : 'Play Sound'}</span>
+          <span className="btn-label-short">{isPlayingAudio ? 'On' : 'Mute'}</span>
         </button>
       </nav>
     </header>

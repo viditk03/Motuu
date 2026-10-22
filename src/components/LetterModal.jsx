@@ -1,7 +1,7 @@
 import React from 'react';
 
 /**
- * A beautiful, elegant handwritten-style letter modal for Kshitija.
+ * A beautiful, elegant handwritten-style letter modal for Motuu.
  */
 export default function LetterModal({ isOpen, onClose }) {
   if (!isOpen) return null;
@@ -28,9 +28,12 @@ export default function LetterModal({ isOpen, onClose }) {
           position: 'relative',
           maxWidth: '480px',
           width: '100%',
+          maxHeight: '88vh',
+          maxHeight: '88dvh',
+          overflowY: 'auto',
           background: 'linear-gradient(145deg, #fffbf5, #fef7ee)',
           borderRadius: '24px',
-          padding: '36px 32px',
+          padding: 'clamp(20px, 5vw, 36px) clamp(16px, 5vw, 32px)',
           boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(251, 191, 36, 0.2)',
           border: '1px solid rgba(254, 215, 170, 0.6)',
           textAlign: 'center',
@@ -52,38 +55,40 @@ export default function LetterModal({ isOpen, onClose }) {
             letterSpacing: '0.02em',
           }}
         >
-          Dear Kshitija,
+          Dear Motuu,
         </h2>
 
         <p
           style={{
             fontSize: '1.05rem',
-            lineHeight: 1.8,
+            lineHeight: 1.85,
             color: '#78350f',
             fontStyle: 'italic',
-            marginBottom: '20px',
+            marginBottom: '18px',
           }}
         >
-          Real flowers eventually fade, so I built this garden for you.
-          Every petal here is coded to bloom perpetually — dancing with the breeze,
-          facing you with warmth, and never withering.
+          Earthly blossoms wither with time, but in my heart, you never do.
+          So I wove this sanctuary under the open sky just for you — where every petal dances
+          to your rhythm, glows under the starlight, and blooms without end.
         </p>
 
         <p
           style={{
             fontSize: '1rem',
-            lineHeight: 1.7,
+            lineHeight: 1.8,
             color: '#92400e',
-            marginBottom: '26px',
+            marginBottom: '20px',
           }}
         >
-          Whenever you need a moment of peace, a quiet breath, or a reminder of how
-          cherished you are, this little sanctuary is always here for you. ✨
+          Whenever the world feels overwhelming or quiet, close your eyes and remember:
+          you are the softest light, the sweetest laughter, and my favorite reason to smile.
+          Every petal here carries a secret wish made only for you. ✨
         </p>
 
         <div
           style={{
-            fontSize: '1.1rem',
+            fontSize: '1.05rem',
+            lineHeight: 1.7,
             fontWeight: 600,
             color: '#b45309',
             fontFamily: "'Playfair Display', Georgia, serif",
@@ -92,9 +97,18 @@ export default function LetterModal({ isOpen, onClose }) {
             marginBottom: '24px',
           }}
         >
-          A garden that blooms forever, just for you. 💖
+          <span style={{ display: 'block', fontSize: '1.15rem', color: '#be123c', marginBottom: '8px' }}>
+            Forever your soft place to land. 🌸💫
+          </span>
+          No matter where tomorrow takes us, every flower here will keep whispering your name.
           <br /><br />
-          Goodbye, Kshitija.
+          <span style={{ fontStyle: 'italic', color: '#9a3412', fontSize: '1.1rem' }}>
+            With endless love & warmth, always,
+          </span>
+          <br />
+          <span style={{ fontSize: '1.25rem', color: '#e11d48', fontWeight: 700 }}>
+            Yours always, Motuu's forever 💖
+          </span>
         </div>
 
         <button

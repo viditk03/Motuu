@@ -494,11 +494,11 @@ export default function Garden({ theme = 'dawn' }) {
   const [clickHearts, setClickHearts] = React.useState([]);
 
   const sweetNotes = useMemo(() => [
-    "Like this bloom, you bring color to everything around you, Kshitija. ✨",
-    "No flower in this entire meadow could ever be as radiant as your smile, Kshitija. 🌸",
+    "Like this bloom, you bring color to everything around you, Motuu. ✨",
+    "No flower in this entire meadow could ever be as radiant as your smile, Motuu. 🌸",
     "Real flowers fade with time, but this garden blooms forever just for you. 💖",
     "You make ordinary days feel like a sunny morning in spring. ☀️",
-    "Every petal here is a little reminder of how special you are, Kshitija. 🌷",
+    "Every petal here is a little reminder of how special you are, Motuu. 🌷",
     "Just in case no one told you today: you are genuinely wonderful. 💫",
     "A thousand flowers, and my favorite view is still you. 🌹",
     "Wishing you as much peace and joy as a quiet garden at sunrise. 🌿",
@@ -567,34 +567,34 @@ export default function Garden({ theme = 'dawn' }) {
       {/* Drifting petals */}
       <PetalParticles count={22} />
 
-      {/* Sweet popup card when clicking a flower for Kshitija */}
+      {/* Sweet popup card when clicking a flower for Motuu */}
       {activeNote && (
         <div
           style={{
             position: 'absolute',
-            bottom: '160px',
+            bottom: 'clamp(90px, 18vh, 160px)',
             left: '50%',
             transform: 'translateX(-50%)',
             zIndex: 40,
-            background: 'rgba(255, 255, 255, 0.88)',
+            background: 'rgba(255, 255, 255, 0.92)',
             backdropFilter: 'blur(16px)',
             WebkitBackdropFilter: 'blur(16px)',
-            padding: '16px 24px',
+            padding: '14px 20px',
             borderRadius: '20px',
             border: '1px solid rgba(244, 63, 94, 0.3)',
             boxShadow: '0 20px 35px -10px rgba(0, 0, 0, 0.15)',
             color: '#881337',
             fontFamily: "'Playfair Display', Georgia, serif",
-            fontSize: '1.05rem',
+            fontSize: 'clamp(0.9rem, 2.8vw, 1.05rem)',
             textAlign: 'center',
-            maxWidth: '90vw',
-            width: '440px',
+            maxWidth: '92vw',
+            width: '420px',
             animation: 'notePop 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
             pointerEvents: 'auto',
           }}
         >
           <div style={{ fontSize: '0.8rem', textTransform: 'uppercase', letterSpacing: '0.1em', color: '#e11d48', marginBottom: '4px', fontWeight: 600 }}>
-            🌸 A Bloom For Kshitija
+            🌸 A Bloom For Motuu
           </div>
           <div style={{ fontStyle: 'italic', lineHeight: 1.5 }}>
             "{activeNote.text}"
@@ -649,7 +649,7 @@ export default function Garden({ theme = 'dawn' }) {
 
       {/* Bottom atmospheric title */}
       <div className="peaceful-prompt">
-        A garden that blooms forever, just for Kshitija ✨ • Click any flower
+        A garden that blooms forever, just for Motuu ✨ • Click any flower
       </div>
     </div>
   );

@@ -21,7 +21,7 @@ export default function App() {
         overflow: 'hidden',
       }}
     >
-      {/* Ambient header controls (Themes, Sound & Note for Kshitija) */}
+      {/* Ambient header controls (Themes, Sound & Note for Motuu) */}
       <GardenControls
         theme={theme}
         setTheme={setTheme}
@@ -31,7 +31,7 @@ export default function App() {
       {/* Main Fullscreen Animated Garden Scene */}
       <Garden theme={theme} />
 
-      {/* Dedicated Handwritten Note Modal for Kshitija */}
+      {/* Dedicated Handwritten Note Modal for Motuu */}
       <LetterModal
         isOpen={isLetterOpen}
         onClose={() => setIsLetterOpen(false)}
